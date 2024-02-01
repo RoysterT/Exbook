@@ -1,0 +1,95 @@
+/* 悬浮工具栏 */
+.float-bar-wrapper {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -140px;
+    margin-left: 620px;
+    width: 65px;
+    height: 264px;
+    background-color: white;
+    overflow: hidden;
+    z-index: 999;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -2px 0 30px 2px rgb(97 105 119 / 18%);
+    transition: height .3s ease-in-out;
+}
+
+/* 功能块 */
+.float-bar-item-all {
+    height: max-content;
+    width: max-content;
+    position: absolute;
+    top: 6px;
+    /* bottom: 0;
+    margin: auto 0; */
+    overflow: hidden;
+    /* background-color: red; */
+}
+
+/* 悬浮工具栏按钮 */
+.float-bar-item {
+    width: 65px;
+    height: 80px;
+    margin: 4px 0;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* 悬浮工具栏按钮hover */
+.float-bar-item:hover {
+    background-color: #f6f8f9;
+}
+
+/* 悬浮工具栏图标 */
+.float-bar-iconfont {
+    display: block;
+    width: 65px;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 悬浮工具栏文字 */
+.float-bar-item-text {
+    color: #333;
+    display: block;
+    height: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* 购物车 */
+.float-bar-iconfont-hover{
+    color: #333;
+    display: none;
+    width: 65px;
+    height: 40px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* 购物车hover */
+#floatBarCart:hover .float-bar-iconfont-hover{
+    display: block;
+}
+#floatBarCart:hover .float-bar-iconfont{
+    display: none;
+}
+
+#toTop:hover .to-top-iconfont{
+    position: relative;
+    animation: toTopHoverAnime 1s infinite ease-in-out;
+    -webkit-animation: toTopHoverAnime 1s infinite ease-in-out;
+}
+
+@keyframes toTopHoverAnime{
+    0%{bottom: 0px;}
+    25%{bottom: -3px;}
+    50%{bottom: 0px;}
+    75%{bottom: 3px;}
+    100%{bottom: 0px;}
+}

@@ -1,0 +1,141 @@
+/* 主体内容框 */
+.content-box{
+    width: 1140px;
+    padding: 30px;
+    min-height: 300px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: rgba(85, 170, 255, 0.6) solid 3px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+
+/* 商品容器 */
+.goods-wrapper{
+    position: relative;
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    height: max-content;
+}
+
+/* 单个商品容器 */
+.single-product-wrapper{
+    width: 255px;
+    margin: 20px 10px;
+    height: 255px;
+    display: inline-block;
+    border: #bbb solid 1px;
+    transition: border-color .2s ease-in-out;
+    overflow: hidden;
+    cursor: default;
+}
+.single-product-wrapper:hover{
+    border-color: #5af;
+}
+.single-product-wrapper:hover .product-img{
+    transform: scale(1.1);
+}
+.single-product-wrapper:hover .product-content{
+    top: -120px;
+    /* top: -100%; */
+    /* bottom: 0; */
+}
+
+/* 商品图容器 */
+.product-img-wrapper{
+    width: 255px;
+    height: 255px;
+    overflow: hidden;
+}
+
+/* 商品图 */
+.product-img{
+    width: 100%;
+    height: 100%;
+    transition: all .2s ease-in-out;
+}
+
+/* 商品介绍 */
+.product-content{
+    position: relative;
+    top: 0;
+    width: 239px;
+    height: 120px;
+    padding: 5px 8px;
+    transition: top .2s ease-in-out;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+/* 商品价格 */
+.product-price{
+    background-color: #fff;
+    width: max-content;
+    font-family: "微软雅黑";
+    font-weight: 800;
+}
+
+/* 商品价格整数部分 */
+.product-integer{
+    font-size: 23px;
+    color: #0068b5;
+}
+
+/* 商品价格小数部分 */
+.product-decimal{
+    font-size: 18px;
+    color: #0068b5;
+    display: inline-block;
+    position: relative;
+    left: -5px;
+}
+
+/* 商品名称 */
+.product-name{
+    font-family: "Arial", "微软雅黑";
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+}
+
+/* 两个按钮 */
+.product-buttons{
+    position: absolute;
+    bottom: 14px;
+    margin: 5px 0;
+}
+.product-buttons button{
+    width: 110px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+    border: 1px solid #0068b5;
+    font-family: "微软雅黑";
+
+}
+
+/* 购买按钮 */
+.product-buy-button{
+    margin-right: 11px;
+    background-color: #fff;
+    color: #333;
+}
+.product-buy-button:hover{
+    background-color: #0068b5;
+    color: white;
+}
+
+/* 加车按钮 */
+.product-add-to-list-button{
+    background-color: #5af;
+    color: white;
+}
+.product-add-to-list-button:hover{
+    background-color: #0068b5;
+}

@@ -1,0 +1,23 @@
+/* 主体内容框 */
+.content-box{
+    width: 1000px;
+    min-height: 300px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border: rgba(85, 170, 255, 0.6) solid 3px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* 没找到提示文字 */
+.non-item-text{
+    width: 100%;
+    line-height: 300px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: "宋体";
+}

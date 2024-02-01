@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录到exBook</title>
+    <link rel="shortcut icon" href="./../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./.././bootstrap-3.4.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/login.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/register.css"> -->
+    <script type="text/javascript" src="./../js/jquery-1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="./../js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 背景 -->
+    <div class="background" id="background"></div>
+    <!-- 返回主页 -->
+    <a href="../index.html">
+        <div class="back-to-index">
+            <i class="cart-iconfont iconfont">&#xe6ff;</i>
+            <span>返回商城</span>
+        </div>
+    </a>
+    <!--登录-->
+    <div class="login-window">
+        <!--欢迎登录-->
+        <div class="window-left">
+            <span class="welcome-login">欢迎登录</span>
+            <div class="user-info-filling-to-register" id="toRegisterBtn">
+                <span class="user-info-filling-text-to-register">去注册</span>
+                <div class="arrow-to-register">
+                    <i class="arrow1-to-register"></i>
+                    <i class="arrow2-to-register"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 切换到注册 -->
+        <script>
+            var toRegisterBtn = document.getElementById("toRegisterBtn");
+            toRegisterBtn.onclick = function () {
+                var loginWindow = document.getElementsByClassName("window-login")[0];
+                var registerWindow = document.getElementsByClassName("window-register")[0];
+                var background = document.getElementById("background");
+                loginWindow.style.left = "5%";
+                loginWindow.style.opacity = "0.25";
+                loginWindow.style.zIndex = "1";
+                registerWindow.style.zIndex = "2";
+                registerWindow.style.left = "5%";
+                registerWindow.style.opacity = "1";
+                background.style.background = "linear-gradient(20deg, #d1e3ff, #FAEBCB)";
+            }
+        </script>
+        <!--欢迎注册-->
+        <div class="window-right">
+            <span class="welcome-login">欢迎注册</span>
+            <div class="user-info-filling-to-login" id="toLoginBtn">
+                <span class="user-info-filling-text-to-login">去登录</span>
+                <div class="arrow-to-login">
+                    <i class="arrow1-to-login"></i>
+                    <i class="arrow2-to-login"></i>
+                </div>
+            </div>
+        </div>
+        <!-- 切换到登录 -->
+        <script>
+            var toLoginBtn = document.getElementById("toLoginBtn");
+            toLoginBtn.onclick = function () {
+                var loginWindow = document.getElementsByClassName("window-login")[0];
+                var registerWindow = document.getElementsByClassName("window-register")[0];
+                var background = document.getElementById("background");
+                loginWindow.style.left = "45%";
+                loginWindow.style.opacity = "1";
+                loginWindow.style.zIndex = "2";
+                registerWindow.style.zIndex = "1";
+                registerWindow.style.left = "45%";
+                registerWindow.style.opacity = "0.25";
+                background.style.background = "linear-gradient(340deg, #FAEBCB, #d1e3ff)";
+            }
+        </script>
+        <!--登录框-->
+        <div class="window-login">
+            <div class="login-content">
+                <b class="register-logo">登录</b>
+                <!--登录表单-->
+<!--                <form id="loginPart" action="./../loginServlet" method="post">-->
+<!--                    &lt;!&ndash;用户名&ndash;&gt;-->
+<!--                    <div class="form-group has-feedback">-->
+<!--                        &lt;!&ndash; <label for="username">用户名</label> &ndash;&gt;-->
+<!--                        <div class="input-group has-feedback">-->
+<!--                            <input id="username" class="form-control input-login" placeholder="用户名" maxlength="20"-->
+<!--                                type="text" name="username">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;密码&ndash;&gt;-->
+<!--                    <div class="form-group has-feedback">-->
+<!--                        &lt;!&ndash; <label for="password">密码</label> &ndash;&gt;-->
+<!--                        <div class="input-group has-feedback">-->
+<!--                            <input id="password" class="input-login form-control" placeholder="密码" maxlength="30"-->
+<!--                                type="password" name="password">-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash;提交按钮&ndash;&gt;-->
+<!--                    <button id="login-button" class="form-control btn btn-warning" type="submit">-->
+<!--                        登&emsp;&emsp;录-->
+<!--                    </button>-->
+<!--                </form>-->
+                <form id="loginPart" action="./../loginServlet" method="post">
+                    <!--用户名-->
+                    <div class="form-group has-feedback">
+                        <!-- <label for="username">用户名</label> -->
+                        <div class="input-group has-feedback">
+                            <input id="username" class="form-control input-login" placeholder="用户名" maxlength="20"
+                                   type="text" name="username">
+                        </div>
+                    </div>
+                    <!--密码-->
+                    <div class="form-group has-feedback">
+                        <!-- <label for="password">密码</label> -->
+                        <div class="input-group has-feedback">
+                            <input id="password" class="input-login form-control" placeholder="密码" maxlength="30"
+                                   type="password" name="password">
+                        </div>
+                    </div>
+                    <!--提交按钮-->
+                    <button id="login-button" class="form-control btn btn-warning" type="submit"
+                            v-on:click="submitData">
+                        登&emsp;&emsp;录
+                    </button>
+                </form>
+                <!--登录表单的css设置-->
+                <style type="text/css">
+                    #loginPart {
+                        margin: 20px;
+                        padding: 20px;
+                    }
+
+                    #loginPart input {
+                        margin: 0 0 15px 0;
+                        padding: 18px;
+                        border-radius: 3%;
+                    }
+
+                    #loginPart label {
+                        font-size: larger;
+                    }
+                </style>
+                <!--登录表单的js-->
+<!--                <script>-->
+<!--                    var loginPart = new Vue({-->
+<!--                        el: '#loginPart',-->
+<!--                        data: {},-->
+<!--                        methods: {-->
+<!--                            //提交表单-->
+<!--                            submitData: function () {-->
+<!--                                username = $("#loginPart #username").val();-->
+<!--                                password = $("#loginPart #password").val();-->
+<!--                                $.post("exBook_war/loginServlet", {-->
+<!--                                    username: username,-->
+<!--                                    password: password-->
+<!--                                },-->
+<!--                                function (data) {-->
+<!--                                    window.location.href=data;-->
+<!--                                });-->
+<!--                                alert("username:" + username + "\n" + "password:" + password);-->
+<!--                                sessionStorage.setItem("user", username);-->
+<!--                                sessionStorage.setItem("loginStatus", true);-->
+<!--                                window.location.href = "./.././../java/web/LoginServlet.java";-->
+<!--                            }-->
+<!--                        }-->
+<!--                    })-->
+<!--                </script>-->
+            </div>
+        </div>
+        <!--注册框-->
+        <div class="window-register">
+            <div class="login-content">
+                <b class="register-logo">注册</b>
+                <!--注册表单-->
+                <form id="registerPart" action="./../registerServlet" method="post">
+                    <!--用户名-->
+                    <div class="form-group has-feedback">
+                        <!-- <label for="username">用户名</label> -->
+                        <div class="input-group has-feedback">
+                            <input id="username1" class="input-register form-control" placeholder="用户名" maxlength="20"
+                                type="text" v-on:change="checkUsername" name="username">
+                            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+                        <span>用户名已存在</span>
+                    </div>
+                    <!--密码-->
+                    <div class="form-group has-feedback">
+                        <!-- <label for="password">密码</label> -->
+                        <div class="input-group has-feedback">
+                            <input id="password1" class="input-register form-control" placeholder="密码" maxlength="30"
+                                type="password" v-on:change="checkPassword" name="password">
+                            <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                        </div>
+
+                        <span>密码格式不正确</span>
+                    </div>
+                    <!--确认密码-->
+                    <div class="form-group has-feedback">
+                        <!-- <label for="passwordConfirm">确认密码</label> -->
+                        <div class="input-group has-feedback">
+                            <input id="passwordConfirm" class="input-register form-control" placeholder="确认密码"
+                                maxlength="30" type="password" v-on:change="compare">
+                            <span class="glyphicon glyphicon-circle-arrow-right form-control-feedback"></span>
+                        </div>
+                        <span id="pasConCheck">两次输入不一致</span>
+                    </div>
+                    <!--提交按钮-->
+                    <button id="register-button" class="form-control btn btn-info" type="submit">
+                        注&emsp;&emsp;册
+                    </button>
+                </form>
+                <!--注册表单的css样式-->
+                <style type="text/css">
+                    #registerPart {
+                        margin: 5px 20px;
+                        padding: 5px 20px;
+                    }
+
+                    #registerPart input {
+                        margin: 0 0 3px 0;
+                        padding: 0 8px;
+                        border-radius: 3%;
+                    }
+
+                    #registerPart>div>span {
+                        color: red;
+                    }
+                </style>
+                <!--登录表单的js-->
+                <script>
+                    var registerPart = new Vue({
+                        el: '#registerPart',
+                        data: {},
+                        methods: {
+                            //实时检查用户名
+                            checkUsername: function () {
+                                username = $("#registerPart #username1").val();
+                                $.post("", {
+                                    username: username,
+                                }, function (data, status) {
+                                });
+                                // alert(username);
+                            },
+                            //检查密码
+                            checkPassword: function () {
+                                password = $("#registerPart #password1").val();
+                                $.post("", {
+                                    password: password,
+                                }, function (data, status) {
+                                })
+                                // alert(password);
+                            },
+                            //检查两项密码是否一致
+                            compare: function () {
+                                password = $("#registerPart #password1").val();
+                                passwordConfirm = $("#registerPart #passwordConfirm").val();
+
+                                if (password.toString() == passwordConfirm.toString()) {
+                                    $("#registerPart #pasConCheck").html("格式正确");
+                                    $("#registerPart #passwordConfirm+span").attr("class",
+                                        "glyphicon glyphicon-ok form-control-feedback");
+                                    $("#registerPart #pasConCheck").css("color", "green");
+                                }
+                                else {
+                                    $("#registerPart #pasConCheck").html("密码与确认密码不一致");
+                                    $("#registerPart #passwordConfirm+span").attr("class",
+                                        "glyphicon glyphicon-circle-arrow-right form-control-feedback")
+                                    $("#registerPart #pasConCheck").css("color", "red");
+                                }
+                                // alert(passwordConfirm);
+                            },
+                            // //提交表单
+                            // submitData: function () {
+                            //     if (password.toString() == passwordConfirm.toString()) {
+                            //         username = $("#registerPart #username").val();
+                            //         password = $("#registerPart #password").val();
+                            //         $.post("", {
+                            //             username: username,
+                            //             password: password
+                            //         },
+                            //             function (data, status) {
+                            //             });
+                            //         sessionStorage.setItem("user", username);
+                            //         sessionStorage.setItem("loginStatus", true);
+                            //         // window.location.href = "./.././../java/web/LoginServlet.java";
+                            //     }
+                            //     else {
+                            //         alert("两次输入不一致，请重新输入密码！");
+                            //     }
+                            //     alert("username:" + username + "\npassword:" + password + "\nconfirm:" + passwordConfirm);
+                            // }
+                        },
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- 底部备案 -->
+    <div class="footer-wrapper" style="position: absolute;">
+        <div class="footer-beian-wrapper">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502007232">
+                <img src="./../img/beian.png" class="beian-logo" alt="beianLogo"/>
+                <span>粤公网安备 44030502007232号</span>
+            </a>
+            <span> | </span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021022294号</a>
+            <br/>
+            <span>Copyright &copy; 2022 新手，我也不会 All Rights Reserved</span>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="./js/loginWindowOnload.js"></script>
+<script>
+    
+</script>
+
+</html>

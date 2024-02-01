@@ -1,0 +1,126 @@
+/* banner区域 */
+.banner{
+    width: 100%;
+    position: relative;
+}
+
+/* banner背景 */
+.banner-bg{
+    width: 100%;
+    margin-bottom: 60px;
+    z-index: -1;
+}
+
+/* banner图 */
+.banner-img{
+    width: 720px;
+    position: absolute;
+    left: 50%;
+    margin-left: -120px;
+    top: 35px;
+    z-index: 1;
+}
+
+/* banner文字区域 */
+.banner-text-wrapper{
+    padding-top: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    right: 50%;
+    margin: auto 120px auto 0;
+    width: 500px;
+    height: 300px;
+    background-color: #0068b5;
+}
+
+/* banner logo */
+.banner-logo{
+    position: absolute;
+    width: 80px;
+    left: 40px;
+    top: 30px;
+}
+
+/* banner文字标题 */
+.banner-text-title{
+    display: block;
+    width: 430px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 50px auto 20px;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 1.125;
+    font-weight: 300;
+    margin-bottom: .5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* banner文字内容 */
+.banner-text-content{
+    color: white;
+    line-height: 1.25;
+    font-weight: 400;
+    margin-top: .5rem;
+    text-align: left;
+    font-family: "Microsoft YaHei", SimHei, Arial, sans-serif;
+    font-size: 16px;
+    width: 430px;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    margin: 0 auto;
+}
+
+/* cpu分类链接 */
+.cpu-type-link:hover .cpu-icon-img{
+    transform: scale(1.1);
+}
+
+/* cpu分类介绍容器 */
+.cpu-type-wrapper{
+    width: 1100px;
+    height: 80px;
+    padding: 30px 20px;
+    border-bottom: #333 solid 2px;
+}
+
+/* cpu分类介绍icon */
+.cpu-icon{
+
+}
+
+/* cpu分类icon */
+.cpu-icon-img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    transition-duration: .4s,.4s;
+    transition-timing-function: cubic-bezier(.31,3.4,.29,-.15),cubic-bezier(.31,3.4,.29,-.15);
+}
+
+/* cpu分类文字 */
+.cpu-text{
+    float: left;
+    width: 1000px;
+    margin-left: 20px;
+    font-family: 'Times New Roman', "微软雅黑";
+    color: #333;
+}
+
+/* cpu分类类名 */
+.cpu-icon-title-text{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+/* cpu分类介绍 */
+.cpu-intro{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Arial, "微软雅黑";
+}

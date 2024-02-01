@@ -1,0 +1,284 @@
+/* banner容器 */
+.banner-wrapper {
+    width: 1140px;
+    height: 460px;
+    background-color: white;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* banner左侧导购区域 */
+.left-guide-wrapper {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    height: 440px;
+    position: relative;
+    padding: 10px;
+    cursor: default;
+}
+
+/* 导购表格 */
+.shooping-guide-list {
+    position: absolute;
+    height: max-content;
+    width: 340px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #f6f8f9;
+    border-radius: 20px;
+    padding: 20px;
+    /* background-color: red; */
+}
+
+/* 导购表表头 */
+.guide-title {
+    height: 40px;
+    width: 320px;
+    text-align: left;
+    line-height: 35px;
+    font-size: 22px;
+    padding: 0 10px;
+    /* background-color: green; */
+}
+
+/* 导购表行 */
+.shopping-guide-row {
+    height: 35px;
+    padding: 0 5px;
+    list-style: none;
+    line-height: 35px;
+}
+
+/* 导购表行hover */
+.shopping-guide-row:hover {
+    background-color: #e9e9e9;
+}
+
+.shopping-guide-row:hover .shopping-guide-row-title {
+    color: #5af;
+}
+
+.shopping-guide-row:hover .shopping-guide-iconfont {
+    color: #5af;
+}
+
+/* 导购表iconfont */
+.shopping-guide-iconfont {
+    margin-left: 3px;
+    font-size: 16px;
+    color: black;
+}
+
+/* 导购表每行表头 */
+.shopping-guide-row-title {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 导购表每行表头hover */
+.shopping-guide-row-title:hover {
+    text-decoration: underline;
+    color: #5af;
+}
+
+/* 导购表内容 */
+.shopping-guide-row-item {
+    display: inline-block;
+    width: 70px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* 导购表内容hover */
+.shopping-guide-row-item:hover {
+    color: #5af;
+}
+
+/* banner右侧展示 */
+.right-exibit-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 740px;
+    height: 430px;
+}
+
+.banner-exibit-img-wrapper{
+    position: relative;
+    height: 416px;
+    background-color: #F7F9FA;
+    margin: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* banner右箭头盒子 */
+.banner-next-arr-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 36px;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* banner右箭头 */
+.banner-next-arr{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -4px;
+    margin: auto 0;
+    width: 20px;
+    height: 20px;
+    border: #fff solid 4px;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+    transition: left .2s ease;
+}
+.banner-next-arr-box:hover .banner-next-arr{
+    left: 0px;
+}
+
+/* banner左箭头盒子 */
+.banner-back-arr-box{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 36px;
+    height: 54px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    overflow: hidden;
+}
+
+/* banner左箭头 */
+.banner-back-arr{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    margin: auto 0;
+    width: 20px;
+    height: 20px;
+    border: #fff solid 4px;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(-135deg);
+    transition: left .2s ease;
+}
+.banner-back-arr-box:hover .banner-back-arr{
+    left: 12px;
+}
+
+/* banner展示图 */
+.right-exibit-img {
+    width: 400%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    cursor: default;
+    transition: left .3s ease-in-out;
+    /* animation: bannerAnime 15s infinite;
+    -webkit-animation: bannerAnime 15s infinite; */
+}
+
+@keyframes bannerAnime{
+    0%{left: 0;}
+    23%{left: 0;}
+    25%{left: -100%;}
+    48%{left: -100%;}
+    50%{left: -200%;}
+    73%{left: -200%;}
+    75%{left: -300%;}
+    98%{left: -300%;}
+    100%{left: 0;}
+}
+
+@keyframes bannerAnime1{
+    0%{left: 0%;}
+    23%{left: 0%;}
+    25%{left: -100%;}
+    97.9999%{left: -100%;}
+    98%{left: 100%;}
+    100%{left: 0%;}
+}
+
+@keyframes bannerAnime2{
+    0%{left: 100%;}
+    23%{left: 100%;}
+    25%{left: 0%;}
+    48%{left: 0%;}
+    50%{left: -100%;}
+    97.9999%{left: -100%;}
+    99.9999%{left: -100%;}
+    100%{left: 100%;}
+}
+
+@keyframes bannerAnime3{
+    0%{left: 100%;}
+    48%{left: 100%;}
+    50%{left: 0%;}
+    73%{left: 0%;}
+    75%{left: -100%;}
+    99.9999%{left: -100%;}
+    100%{left: 100%;}
+}
+
+@keyframes bannerAnime4{
+    0%{left: -100%;}
+    0.0001%{left: 100%;}
+    73%{left: 100%;}
+    75%{left: 0%;}
+    98%{left: 0%;}
+    100%{left: -100%;}
+}
+
+/* banner图提示点 */
+.banner-point-wrapper{
+    position: relative;
+    width: max-content;
+    height: 14px;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    line-height: 14px;
+    cursor: default;
+}
+.banner-point-wrapper>i{
+    display: inline-block;
+    font-size: 10px;
+    opacity: .8;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.banner-point-wrapper>i:hover{
+    transform: scale(1.23);
+}

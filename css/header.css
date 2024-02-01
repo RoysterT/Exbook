@@ -1,0 +1,254 @@
+/* 头部 */
+header {
+    width: 100%;
+    min-width: 500px;
+    height: 40px;
+    background-color: #ddd;
+    line-height: 40px;
+}
+
+/* 头部内容区 */
+.header-content {
+    max-width: 1000px;
+    min-width: 640px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+/* 头部左侧内容 */
+.header-left-wrapper {
+    float: right;
+    width: max-content;
+    padding: 0 10px;
+}
+
+/* 左侧内容全部 */
+.header-login-menu {
+    width: 100%;
+    cursor: default;
+}
+
+/* 左侧内容文本 */
+.header-welcome-text {
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* 登录注册链接 */
+.header-login {
+    color: #333;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color .1s ease-in-out;
+}
+
+.header-login:hover {
+    color: #5af;
+}
+
+#userNameText{
+    cursor: pointer;
+}
+
+/* 右侧全部内容 */
+.header-right-wrapper {
+    float: left;
+    width: max-content;
+    font-size: 13px;
+}
+
+/* 个人信息 */
+.header-cart-menu {
+    float: left;
+    width: 100px;
+}
+
+/* 个人信息box */
+.manage-my-account {
+    /* background-color: red; */
+    position: relative;
+    padding: 0 5px;
+    cursor: default;
+    transition: background-color .3s ease-in-out;
+    text-align: center;
+}
+
+/* 个人信息hover */
+.manage-my-account:hover {
+    background-color: #eee;
+}
+
+.manage-my-account:hover .my-account-drop-down-wrapper {
+    pointer-events: all;
+    height: 60px;
+    padding: 12px 0;
+}
+
+.manage-my-account:hover .down-arr {
+    transform: rotate(225deg);
+    top: 4px;
+    animation: none;
+    -webkit-animation: none;
+}
+
+.manage-my-account:hover .my-account-text {
+    top: 0px;
+    font-weight: 800;
+}
+
+/* 个人信息文字 */
+.my-account-text {
+    position: relative;
+    top: -4px;
+    transition: all .3s ease-in-out;
+}
+
+/* 个人信息箭头 */
+.my-account-arr {
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    transform: rotate(45deg);
+    border: 1px solid #333;
+    border-top: none;
+    border-left: none;
+}
+
+/* 下拉箭头提示框 */
+.down-arrow-wrapper {
+    position: absolute;
+    bottom: 0px;
+    background-color: #eee;
+    width: 100%;
+    height: 12px;
+}
+
+/* 下拉提示箭头 */
+.down-arr {
+    width: 4px;
+    height: 4px;
+    border: 3px #333 solid;
+    transform: rotate(45deg);
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-top: none;
+    border-left: none;
+    transition: transform .3s ease;
+    animation: downTipArrPlay 2s infinite ease-in-out;
+    -webkit-animation: downTipArrPlay 2s infinite ease-in-out;
+}
+
+@keyframes downTipArrPlay {
+    0% {
+        top: 0px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    60% {
+        top: -1.5px;
+    }
+
+    70% {
+        top: 1.5px;
+    }
+
+    80% {
+        top: -1.5px;
+    }
+
+    90% {
+        top: 1.5px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+/* 个人信息下拉菜单 */
+.my-account-drop-down-wrapper {
+    position: absolute;
+    top: 28px;
+    padding: 6px 0;
+    left: 0;
+    width: 100px;
+    background-color: #eee;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    height: 0;
+    transition: height .3s ease-in-out;
+    overflow: hidden;
+}
+
+/* 下拉菜单内容 */
+.my-account-drop-down-wrapper>a {
+    height: 30px;
+    line-height: 30px;
+}
+
+.my-account-drop-down-wrapper>a:hover div {
+    background-color: #ddd;
+}
+
+/* 下拉菜单内容文字 */
+.my-account-drop-down-wrapper-item {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 下拉菜单内容背景过度 */
+.my-purchase,
+.my-account {
+    transition: all .2s ease-in-out;
+}
+
+/* 顶部功能按钮 */
+.header-function {
+    margin-left: 10px;
+    float: right;
+    text-align: center;
+    width: 80px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+}
+
+.header-function:hover {
+    background-color: #eee;
+}
+
+.header-cart:hover {
+    color: #5af;
+}
+
+.header-help-iconfont {
+    font-size: 22px;
+}
+
+.marquee-text{
+    display: block;
+    font-size: 18px;
+    color: black;
+    height: 30px;
+    line-height: 30px;
+    font-family: "微软雅黑";
+    transition: font-size .2s ease-in-out;
+}
+
+.marquee-text:hover{
+    font-weight: 800;
+    font-size: 20px;
+}

@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "微软雅黑", Arial, Helvetica, sans-serif;
+    /* overflow-x: hidden; */
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../iconfont/iconfont.woff2') format('woff2'),
+        url('../iconfont/iconfont.woff') format('woff'),
+        url('../iconfont/iconfont.ttf') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.background {
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(340deg, #FAEBCB, #d1e3ff);
+    opacity: .6;
+}
+
+@media screen and (min-width:1260px) and (max-width:14400px) {
+    body {
+        zoom: .9;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1260px) {
+    body {
+        zoom: .8;
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:900px) {
+    body {
+        zoom: .7;
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:700px) {
+    body {
+        zoom: .5;
+    }
+}
+
+@media screen and (min-width:450px) and (max-width:600px) {
+    body {
+        zoom: .4;
+    }
+}
+
+.content-frame-box{
+    width: 100%;
+}
+
+/* .fixed-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+} */

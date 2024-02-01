@@ -1,0 +1,261 @@
+{
+  "id": "3457283",
+  "name": "电商平台",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "687392",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e6ff",
+      "unicode_decimal": 59135
+    },
+    {
+      "icon_id": "6141084",
+      "name": "AK-YK_圆圈_fill",
+      "font_class": "yk_yuanquan_fill",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "6345986",
+      "name": "round",
+      "font_class": "round",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "14313190",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "248884",
+      "name": "注册",
+      "font_class": "zhuce",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "248887",
+      "name": "登录",
+      "font_class": "denglu",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "693709",
+      "name": "意见反馈",
+      "font_class": "yijianfankui3",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "655576",
+      "name": "意见反馈",
+      "font_class": "yijianfankui",
+      "unicode": "e672",
+      "unicode_decimal": 58994
+    },
+    {
+      "icon_id": "1170241",
+      "name": "意见反馈",
+      "font_class": "yijianfankui1",
+      "unicode": "e7de",
+      "unicode_decimal": 59358
+    },
+    {
+      "icon_id": "12820173",
+      "name": "后台管理",
+      "font_class": "houtaiguanli",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "9748113",
+      "name": "返回顶部",
+      "font_class": "fanhuidingbu",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "1014",
+      "name": "硬盘",
+      "font_class": "yingpan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "5030",
+      "name": "购物车满",
+      "font_class": "gouwucheman",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "251913",
+      "name": "选择框_默认",
+      "font_class": "xuanzekuangmoren",
+      "unicode": "e6c1",
+      "unicode_decimal": 59073
+    },
+    {
+      "icon_id": "668861",
+      "name": "回顶部",
+      "font_class": "huidingbu",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "903841",
+      "name": "选择框-选中",
+      "font_class": "xuanzekuangxuanzhong",
+      "unicode": "e678",
+      "unicode_decimal": 59000
+    },
+    {
+      "icon_id": "3523428",
+      "name": "ic_加入购物车",
+      "font_class": "ic_jiarugouwuche",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "4988488",
+      "name": "电脑机箱-01",
+      "font_class": "diannaojixiang-",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "5057042",
+      "name": "电源",
+      "font_class": "dianyuan",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "5057052",
+      "name": "固态硬盘",
+      "font_class": "gutaiyingpan",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "6501295",
+      "name": "删除",
+      "font_class": "icon--shanchu",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "7983611",
+      "name": "主板",
+      "font_class": "xingzhuang",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "7983612",
+      "name": "CPU",
+      "font_class": "xingzhuang1",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7983613",
+      "name": "显卡",
+      "font_class": "xingzhuang2",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "7983617",
+      "name": "内存",
+      "font_class": "xingzhuang3",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "7983618",
+      "name": "散热器",
+      "font_class": "xingzhuang4",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "7983620",
+      "name": "水冷散热器",
+      "font_class": "xingzhuang5",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "12978133",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "13625317",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "13645015",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "18169509",
+      "name": "键盘,打字",
+      "font_class": "keyborad",
+      "unicode": "e91c",
+      "unicode_decimal": 59676
+    },
+    {
+      "icon_id": "18169604",
+      "name": "电视,显示器,显示屏,电视机,液晶显示器",
+      "font_class": "lcd",
+      "unicode": "e92b",
+      "unicode_decimal": 59691
+    },
+    {
+      "icon_id": "18760037",
+      "name": "CPU",
+      "font_class": "CPU",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "21500990",
+      "name": "选择框",
+      "font_class": "xuanzekuang",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "22978019",
+      "name": "鼠标",
+      "font_class": "shubiao",
+      "unicode": "e89d",
+      "unicode_decimal": 59549
+    },
+    {
+      "icon_id": "1306",
+      "name": "购物车空",
+      "font_class": "gouwuchekong",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

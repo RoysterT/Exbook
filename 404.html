@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
+    <link rel="stylesheet" type="text/css" href="./css/search.css">
+    <link rel="stylesheet" type="text/css" href="./css/banner.css">
+    <link rel="stylesheet" type="text/css" href="./css/floatbar.css">
+    <link rel="stylesheet" type="text/css" href="./css/content.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./search/css/frameby-search.css">
+    <script type="text/javascript" src="./js/jquery-1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="./js/vue.js"></script>
+    <title>404</title>
+</head>
+
+<body class="none-transition">
+    <!-- 背景 -->
+    <div class="background"></div>
+    <!-- 悬浮工具栏 -->
+    <div class="float-bar-wrapper" id="floatBar">
+        <div class="float-bar-item-all">
+            <div class="float-bar-item">
+                <i class="float-bar-iconfont iconfont">&#xe613;</i>
+                <span class="float-bar-item-text">人工客服</span>
+            </div>
+            <div class="float-bar-item">
+                <i class="float-bar-iconfont iconfont">&#xe672;</i>
+                <span class="float-bar-item-text">意见反馈</span>
+            </div>
+            <div class="float-bar-item" id="floatBarCart">
+                <i class="float-bar-iconfont iconfont">&#xe600;</i>
+                <i class="float-bar-iconfont-hover iconfont">&#xe603;</i>
+                <span class="float-bar-item-text">购物车</span>
+            </div>
+            <div class="float-bar-item" id="toTop">
+                <i class="float-bar-iconfont to-top-iconfont iconfont">&#xe64a;</i>
+                <span class="float-bar-item-text">返回顶部</span>
+            </div>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <header>
+        <div class="header-content">
+            <div class="header-left-wrapper">
+                <div class="header-login-menu">
+                    <!-- 未登录 -->
+                    <b class="header-welcome-text" id="noLogin" style="display: block;">
+                        <span>嗨！欢迎来到商城！请先</span>
+                        <!-- 登录 -->
+                        <a href="./member/login.html?t=login" class="header-login">
+                            <i class="iconfont">&#xe609;</i>
+                        </a>
+                        <span class="header-login-separation">或</span>
+                        <!-- 注册 -->
+                        <a href="./member/login.html?t=register" class="header-login">
+                            <i class="iconfont">&#xe605;</i>
+                        </a>
+                        <span>!</span>
+                    </b>
+                    <!-- 已登录 -->
+                    <b class="header-welcome-text" id="isLogin" style="display: none;">
+                        <span>嗨，</span>
+                        <a href="./" title="点此退出登录" style="color: #333;text-decoration: none;">
+                            <span id="userNameText"></span>
+                        </a>
+                        <span>！欢迎来到商城！</span>
+                    </b>
+                </div>
+            </div>
+            <div class="header-right-wrapper">
+                <div class="header-cart-menu">
+                    <div class="manage-my-account">
+                        <span class="my-account-text">我的商城</span>
+                        <!-- <div class="my-account-arr"></div> -->
+                        <div class="my-account-drop-down-wrapper">
+                            <div class="down-arrow-wrapper">
+                                <div class="down-arr"></div>
+                            </div>
+                            <a href="./404.html" class="my-account-drop-down-wrapper-item">
+                                <div title="这个没有做" class="my-purchase">购买记录</div>
+                            </a>
+                            <a href="./member/login.html" class="my-account-drop-down-wrapper-item">
+                                <div title="这个没有做" class="my-account">账号管理</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-function" id="toManagePage" title="这个没有做">
+                    <i class="cart-iconfont iconfont">&#xe62d;</i>
+                    <span class="header-cart-text">商城后台</span>
+                </div>
+                <div class="header-function" id="customerService">
+                    <i class="cart-iconfont iconfont">&#xe613;</i>
+                    <span class="header-cart-text">联系客服</span>
+                </div>
+                <div class="header-function header-cart" id="headerCart">
+                    <i class="cart-iconfont iconfont">&#xe600;</i>
+                    <span class="header-cart-text">购物车</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- 搜索栏 -->
+    <div class="search-wrapper">
+        <div class="search-logo-box">
+            <!-- <div id="toIndex" style="cursor: pointer;">
+                <img src="favicon.svg" class="search-wrapper-logo">
+                <span>#商城名称#</span>
+            </div> -->
+            <a href="./index.html">
+                <img src="./img/exBook.png" class="search-wrapper-logo" alt="exBook">
+                <!-- <span>exBook</span> -->
+            </a>
+        </div>
+        <!-- 登录逻辑跳转主页 -->
+        <!-- <script>
+            var toIndex = document.getElementById("toIndex");
+            var url = "/";
+            toIndex.onclick = function () {
+                if (loginOrNot) {
+                    url += "index.html?userName=" + userName;
+                }
+                window.location.href = url;
+            }
+        </script> -->
+        <div class="search-bar-wrapper" id="search">
+            <div class="search-bar">
+                <form action="./search/search.html" method="">
+                    <input type="text" name="p" class="search-box" id="search-box" placeholder="在此搜索" title=""
+                        v-on="{input:update,click:update}" required autocomplete="off" @blur="loseFocus()">
+                    <div class="search-icon">
+                        <i class="search-iconfont iconfont">&#xe616;</i>
+                    </div>
+                    <button class="search-btn" id="search-btn" v-on:click="search">搜&nbsp;&nbsp;&nbsp;索</button>
+                </form>
+            </div>
+            <!-- 搜索结果-->
+            <div id="search-display-wrapper">
+                <div id="search-display">
+                    <ul id="search-content">
+                        <span id="clearHistory" v-on:mousedown="clearHistory">清空搜索记录</span>
+                        <li id="noHistory" style="display:none">暂无历史记录</li>
+                        <li v-for="(item) in goods" v-on:mousedown="searchIt(item)">{{item}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // localStorage.setItem("history","12,34,56");
+            // localStorage.clear();
+
+
+            // localStorage.clear();
+            if (localStorage.getItem("history") != null) {
+                var historyStr = localStorage.getItem("history");
+                var historyList = historyStr.split(",").slice(0, 10);
+                var searchDisplayHeight = historyList.length * 32 + 24 + 4;
+                searchDisplayHeightStr = "-" + searchDisplayHeight + "px";
+            } else {
+                $("#noHistory").css("display", "block");
+                var historyList = [];
+                var searchDisplayHeightStr = "-60px";
+            }
+            $("#search-display").css("top", searchDisplayHeightStr);
+
+
+            var search = new Vue({
+                el: '#search',
+                data: {
+                    goods: localStorage.getItem("history") ? localStorage.getItem("history").split(",").slice(0, 10) : [],
+                },
+                methods: {
+                    clearHistory: function () {
+                        console.log("1");
+                        localStorage.removeItem("history");
+                        search.goods = [];
+                        $("#noHistory").css("display", "block");
+                        searchDisplayHeightStr = "-60px";
+                        $("#search-display").css("top", searchDisplayHeightStr);
+                    },
+
+                    search: function () {
+                        console.log("2");
+                        // 有搜索记录
+                        if (localStorage.getItem("history") != null) {
+                            localStorage.removeItem("history");
+                            var newHistoryStr = $("#search-box").val() + "," + historyStr;
+                            localStorage.setItem("history", newHistoryStr);
+                        }
+                        // 无历史记录
+                        else {
+                            var newHistoryStr = $("#search-box").val();
+                            localStorage.setItem("history", newHistoryStr);
+                        }
+
+                        var content = $("#search-box").val();
+                        $.post("", {
+                            content: content,
+                        }, function (data) {
+
+                        })
+                    },
+                    searchIt: function (item) {
+                        console.log("3");
+                        urlSIt = "./search/search.html?p=" + item;
+                        window.location.href = urlSIt;
+                        console.log(item);
+                        $.post("", {
+                            content: item,
+                        }, function (data) {
+
+                        })
+                    },
+                    update: function () {
+                        console.log("4");
+                        var content = $(this).html();
+
+                        if (content == undefined) {
+                            content = null;
+                        }
+
+                        // $("#search-display").css("display", "block");
+                        $("#search-display-wrapper").css("z-index", "11");
+                        $("#search-display").css("top", "-3px");
+                        $("#search-display").css("opacity", "1");
+                        $("#search-display").css("z-index", "11");
+                        $("#search-box").css("border-radius", "20px 20px 20px 0");
+                        $("#search-box").css("border-bottom", "none");
+                        $("#search-btn").css("border-radius", "0 18px 18px 0");
+                        $("#search-btn").css("transform", "scale(1.08)");
+
+                        $.post("", {
+                            content: content,
+                        }, function (data) {
+
+                        })
+                    },
+                    loseFocus: function () {
+                        console.log("6")
+                        // $("#search-display").css("display", "none");
+                        $("#search-display").css("top", searchDisplayHeightStr);
+                        $("#search-display").css("opacity", "0");
+                        $("#search-display").css("z-index", "-1");
+                        setTimeout(function () {
+                            $("#search-box").css("border-bottom", "2px solid #000");
+                            $("#search-box").css("border-radius", "20px");
+                            $("#search-btn").css("border-radius", "18px");
+                            $("#search-btn").css("transform", "scale(1)");
+                            $("#search-display-wrapper").css("z-index", "-1");
+                        }, 400)
+                    }
+                }
+            })
+        </script>
+    </div>
+    <div class="content-box">
+        <div class="non-item-text">404！您请求的页面不存在！</div>
+    </div>
+    <!-- 底部备案 -->
+    <div class="footer-wrapper" style="position: absolute;bottom: 0;">
+        <div class="footer-beian-wrapper">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502007232">
+                <img src="./img/beian.png" class="beian-logo" alt="beianLogo" />
+                <span>粤公网安备 44030502007232号</span>
+            </a>
+            <span> | </span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2021022294号</a>
+            <br />
+            <span>Copyright &copy; 2022 新手，我也不会 All Rights Reserved</span>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="./js/windowOnload.js"></script>
+<script type="text/javascript" src="./js/floatBar.js"></script>
+<script type="text/javascript" src="./js/header.js"></script>
+<script type="text/javascript" src="./js/addCart.js"></script>
+<script type="text/javascript" src="./js/login.js"></script>
+
+</html>

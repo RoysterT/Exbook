@@ -1,0 +1,41 @@
+/* 底部容器 */
+.footer-wrapper {
+    width: 100%;
+    height: 80px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+}
+
+/* 底部备案 */
+.footer-beian-wrapper {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 1000px;
+    height: 60px;
+    padding: 10px 0;
+    line-height: 30px;
+    text-align: center;
+    color: #555;
+}
+
+/* 备案logo */
+.beian-logo {
+    position: relative;
+    top: 4px;
+    left: 2px;
+}
+
+/* 底部备案 */
+.footer-beian-wrapper>a {
+    color: #555;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+/* 底部备案hover */
+.footer-beian-wrapper>a:hover {
+    color: #5af;
+}
